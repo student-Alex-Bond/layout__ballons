@@ -1,0 +1,35 @@
+*,
+ ::after,
+ ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: #777777;
+    font-size: 1.6rem;
+    letter-spacing: .2rem;
+    padding: 5rem;
+    background-color: white;
+}
+
+.header {
+    position: relative;
+    height: 95vh;
+    background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../assets/images/header__background.jpg) center / cover no-repeat;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    &__logo {
+        position: absolute;
+        left: 5rem;
+        top: 5rem;
+        height: 7rem;
+        width: 5.6rem;
+    }
+}
