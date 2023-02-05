@@ -1,5 +1,15 @@
-$main-color: #777777;
-$color-text: #FFFFFF;
+$color-gray: #777777;
+$color-white: #FFFFFF;
+$color-black: #000;
+$color-browm-light: #ba8554;
+$color-browm-dark: #a14f03;
+@mixin style-link($color) {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color;
+}
+
 *,
 ::after,
 ::before {
@@ -15,11 +25,11 @@ html {
 body {
     font-family: "Roboto", "Arial", sans-serif;
     font-weight: 400;
-    color: $main-color;
+    color: $color-gray;
     font-size: 1.6rem;
     letter-spacing: .2rem;
     padding: 5rem;
-    background-color: white;
+    background-color: $color-white;
 }
 
 .header {
@@ -43,16 +53,16 @@ body {
         text-align: center;
     }
     &__title {
-        color: $color-text;
+        color: $color-white;
     }
     &__title_main {
         display: block;
         font-weight: 800;
-        font-size: 50px;
-        line-height: 60px;
-        letter-spacing: 10px;
+        font-size: 5rem;
+        line-height: 6rem;
+        letter-spacing: 1rem;
         text-transform: uppercase;
-        margin-bottom: 10px;
+        margin-bottom: 1rem;
         animation-name: left_to_right;
         animation-duration: 2s;
         animation-delay: 2s;
@@ -62,28 +72,30 @@ body {
     &__title_subtitle {
         display: block;
         font-weight: 200;
-        font-size: 40px;
-        line-height: 48px;
-        letter-spacing: 5px;
+        font-size: 4rem;
+        line-height: 4.8rem;
+        letter-spacing: 0.5rem;
         animation-name: right_to_left;
         animation-duration: 2s;
         animation-delay: 2s;
         animation-timing-function: ease-in;
         backface-visibility: hidden;
-        margin-bottom: 50px;
+        margin-bottom: 6.5rem;
     }
 }
 
 .btn {
     position: relative;
+    &_animated {
+        animation: bottom_to_up 1s ease-out .7s;
+        animation-fill-mode: backwards;
+    }
     &:link,
     &:visited {
-        text-transform: uppercase;
-        text-decoration: none;
-        color: $main-color;
-        display: inline-block;
-        padding: 15px 40px;
-        background: white;
+        @include style-link($color-gray);
+        padding: 1.5rem 4rem;
+        font-size: 2rem;
+        background: $color-white;
         border-radius: 50px;
         transition: all .3s;
     }
@@ -102,11 +114,11 @@ body {
     }
     &::after {
         content: '';
-        background: white;
+        background: $color-white;
         width: 100%;
         height: 100%;
         display: inline-block;
-        border-radius: 50px;
+        border-radius: 5rem;
         position: absolute;
         top: 0;
         left: 0;
@@ -115,13 +127,24 @@ body {
     }
 }
 
+@keyframes bottom_to_up {
+    0% {
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 @keyframes left_to_right {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
     80% {
-        transform: translateX(20px);
+        transform: translateX(2rem);
     }
     100% {
         opacity: 1;
@@ -132,10 +155,10 @@ body {
 @keyframes right_to_left {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
     80% {
-        transform: translateX(-20px);
+        transform: translateX(-2rem);
     }
     100% {
         opacity: 1;
