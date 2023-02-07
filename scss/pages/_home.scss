@@ -1,0 +1,21 @@
+.section-about {
+    padding-top: 8rem;
+}
+
+.title-secondary {
+    display: inline-block;
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, $color-browm-dark 0.03%, rgba(1, 1, 1, 0.7) 99.94%);
+    background-clip: text;
+    color: transparent;
+    transition: transform .4s;
+    backface-visibility: hidden;
+    text-align: center;
+    &:hover {
+        transform: skewY(2deg) skewX(15deg) scale(1.05);
+        text-shadow: 0rem .4rem .4rem rgba($color-black, 0.3);
+    }
+}
