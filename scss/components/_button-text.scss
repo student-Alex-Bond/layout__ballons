@@ -1,0 +1,24 @@
+.btn-text {
+    &:link,
+    &:visited {
+        @include style-link($color-gray);
+        padding: 1.5rem 4rem;
+        font-size: 2rem;
+        background: $color-white;
+        border-radius: 50px;
+        transition: all .3s;
+    }
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.3));
+        &::after {
+            content: '';
+            opacity: 0;
+            transform: scaleX(1.5) scaleY(1.7);
+        }
+    }
+    &:active {
+        transform: translateY(-2px);
+        box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.1));
+    }
+}
