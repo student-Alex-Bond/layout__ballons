@@ -1,24 +1,22 @@
 .btn-text {
     &:link,
     &:visited {
-        @include style-link($color-gray);
-        padding: 1.5rem 4rem;
-        font-size: 2rem;
-        background: $color-white;
-        border-radius: 50px;
-        transition: all .3s;
+        display: inline-block;
+        font-size: 1.6rem;
+        letter-spacing: 0.2rem;
+        font-weight: 700;
+        color: $color-gray;
+        text-decoration: none;
+        padding: 1rem;
+        border-bottom: 1px solid $color-browm-dark;
+        transition: all .5s;
     }
     &:hover {
-        transform: translateY(-4px);
-        box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.3));
-        &::after {
-            content: '';
-            opacity: 0;
-            transform: scaleX(1.5) scaleY(1.7);
-        }
+        background: $color-browm-dark;
+        color: $color-white;
+        transform: translateY(-.2rem);
     }
     &:active {
-        transform: translateY(-2px);
-        box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.1));
+        transform: translateY(0rem);
     }
 }

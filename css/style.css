@@ -121,6 +121,26 @@ body {
   transition: all 0.4s;
 }
 
+.btn-text:link, .btn-text:visited {
+  display: inline-block;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  color: #777777;
+  text-decoration: none;
+  padding: 1rem;
+  border-bottom: 1px solid #a14f03;
+  transition: all 0.5s;
+}
+.btn-text:hover {
+  background: #a14f03;
+  color: #FFFFFF;
+  transform: translateY(-0.2rem);
+}
+.btn-text:active {
+  transform: translateY(0rem);
+}
+
 .header {
   position: relative;
   height: 95vh;
