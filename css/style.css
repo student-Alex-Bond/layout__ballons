@@ -271,4 +271,36 @@ body {
 }
 [class^=col-]:not(:last-child) {
   margin-right: 6rem;
+}
+
+.composition {
+  position: relative;
+}
+.composition__photo {
+  width: 50%;
+  position: absolute;
+  z-index: 10;
+  transition: all 0.2s;
+  border-radius: 0.5rem;
+  outline-offset: 1rem;
+}
+.composition__photo_n1 {
+  top: 0rem;
+  left: 0rem;
+}
+.composition__photo_n2 {
+  right: 0;
+  top: 2rem;
+}
+.composition__photo_n3 {
+  top: 13rem;
+  left: 10rem;
+}
+.composition__photo:hover {
+  outline: 1rem solid #ba8554;
+  scale: 1.1;
+  z-index: 20;
+}
+.composition:hover .composition__photo:not(:hover) {
+  scale: 0.95;
 }/*# sourceMappingURL=style.css.map */
