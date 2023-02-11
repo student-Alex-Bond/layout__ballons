@@ -231,6 +231,7 @@ body {
 
 .section-adventure {
   padding: 21rem 0rem;
+  margin: 15rem 0;
   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../assets/images/section-adventure.jpg) center/cover no-repeat;
   transform: skewY(7deg);
 }
@@ -330,4 +331,30 @@ body {
   background: linear-gradient(90deg, #a14f03 0.03%, rgba(1, 1, 1, 0.7) 99.94%);
   background-clip: text;
   color: transparent;
+}
+
+.card-tour {
+  position: relative;
+  height: 50rem;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+}
+.card-tour__side {
+  height: 50rem;
+  width: 100%;
+  transition: all 0.5s ease-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+.card-tour__side_back {
+  background: linear-gradient(120deg, #ba8554 0.03%, #a14f03 99.94%);
+  transform: rotateY(180deg);
+}
+.card-tour:hover .card-tour__side_front {
+  transform: rotateY(180deg);
+}
+.card-tour:hover .card-tour__side_back {
+  transform: rotateY(0deg);
 }/*# sourceMappingURL=style.css.map */
