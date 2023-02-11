@@ -229,6 +229,11 @@ body {
   line-height: 140%;
 }
 
+.section-adventure {
+  padding: 21rem 0rem;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../assets/images/section-adventure.jpg) center/cover no-repeat;
+}
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -303,4 +308,17 @@ body {
 }
 .composition:hover .composition__photo:not(:hover) {
   scale: 0.95;
+}
+
+.adventure-card {
+  padding: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  border-radius: 0.5rem;
+}
+.adventure-card__icon {
+  font-size: 6rem;
+  background: linear-gradient(90deg, #a14f03 0.03%, rgba(1, 1, 1, 0.7) 99.94%);
+  background-clip: text;
+  color: transparent;
 }/*# sourceMappingURL=style.css.map */

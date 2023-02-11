@@ -1,0 +1,12 @@
+.adventure-card {
+    padding: 2.5rem;
+    background-color: rgba($color: $color-white, $alpha: 0.8);
+    text-align: center;
+    border-radius: .5rem;
+    &__icon {
+        font-size: 6rem;
+        background: linear-gradient(90deg, $color-browm-dark 0.03%, rgba(1, 1, 1, 0.7) 99.94%);
+        background-clip: text;
+        color: transparent;
+    }
+}
