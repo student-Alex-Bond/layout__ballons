@@ -232,6 +232,10 @@ body {
 .section-adventure {
   padding: 21rem 0rem;
   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../assets/images/section-adventure.jpg) center/cover no-repeat;
+  transform: skewY(7deg);
+}
+.section-adventure > * {
+  transform: skewY(-7deg);
 }
 
 .row {
@@ -315,8 +319,13 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+.adventure-card:hover {
+  transform: translateY(-0.2rem) scale(1.03);
 }
 .adventure-card__icon {
+  display: inline-block;
   font-size: 6rem;
   background: linear-gradient(90deg, #a14f03 0.03%, rgba(1, 1, 1, 0.7) 99.94%);
   background-clip: text;
