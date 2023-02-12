@@ -1,0 +1,15 @@
+.feedBack-card {
+    width: 85%;
+    background: rgba($color-white, .75);
+    margin: 0 auto;
+    padding: 6rem;
+    &__img {
+        width: 15rem;
+        height: 15rem;
+        background: green;
+        float: left;
+        border-radius: 50%;
+        shape-outside: circle(50% at 50% 50%);
+        margin-right: 4rem;
+    }
+}
