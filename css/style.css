@@ -209,6 +209,7 @@ body {
   font-weight: 800;
   background: linear-gradient(90deg, #a14f03 0.03%, rgba(1, 1, 1, 0.7) 99.94%);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   transition: transform 0.4s;
   backface-visibility: hidden;
@@ -345,6 +346,7 @@ body {
   display: inline-block;
   font-size: 6rem;
   background: linear-gradient(90deg, #a14f03 0.03%, rgba(1, 1, 1, 0.7) 99.94%);
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }

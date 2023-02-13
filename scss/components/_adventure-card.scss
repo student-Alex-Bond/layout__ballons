@@ -11,6 +11,7 @@
         display: inline-block;
         font-size: 6rem;
         background: linear-gradient(90deg, $color-browm-dark 0.03%, rgba(1, 1, 1, 0.7) 99.94%);
+        -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
     }
