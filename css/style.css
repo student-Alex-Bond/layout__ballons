@@ -452,17 +452,49 @@ body {
 }
 
 .feedBack-card {
-  width: 85%;
+  position: relative;
+  width: 75%;
   background: rgba(255, 255, 255, 0.75);
   margin: 0 auto;
   padding: 6rem;
+  transform: skewX(330deg);
+}
+.feedBack-card > * {
+  transform: skewX(-330deg);
 }
 .feedBack-card__img {
   width: 15rem;
   height: 15rem;
-  background: green;
   float: left;
   border-radius: 50%;
   shape-outside: circle(50% at 50% 50%);
   margin-right: 4rem;
+  overflow: hidden;
+}
+.feedBack-card__img img {
+  width: 100%;
+  transition: all 0.7s;
+  transform: scale(1.2);
+}
+.feedBack-card__name {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  letter-spacing: 0.2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  opacity: 0;
+  transition: all 0.7s;
+}
+.feedBack-card:hover .feedBack-card__name {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.feedBack-card:hover img {
+  transform: scale(1);
+  filter: blur(0.3rem) brightness(60%);
 }/*# sourceMappingURL=style.css.map */
