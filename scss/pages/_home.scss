@@ -54,5 +54,11 @@
 }
 
 .section-feedBack {
-    padding-top: 8rem;
+    position: relative;
+    padding: 8rem 0rem;
+}
+
+.section-book {
+    padding: 10rem;
+    background: linear-gradient(90deg, $color-browm-light, $color-browm-dark);
 }
