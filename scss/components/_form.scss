@@ -4,3 +4,45 @@
     border-radius: .5rem;
     overflow: hidden;
 }
+
+.form {
+    width: 60%;
+    padding-top: 5rem;
+    padding-left: 5rem;
+    &__group:not(:last-child) {
+        margin-bottom: 5rem;
+    }
+    &__input {
+        font-size: 1.6rem;
+        letter-spacing: .2rem;
+        font-weight: 400;
+        color: $color-black;
+        padding: 2rem 0rem 2rem 2rem;
+        background: $color-white;
+        border: none;
+        border-bottom: .2rem solid transparent;
+        border-radius: .5rem;
+        width: 55%;
+        &:focus {
+            outline: none;
+            border-bottom: .2rem solid #66d773;
+        }
+        &:focus:invalid {
+            border-bottom: .2rem solid #D76363;
+        }
+    }
+    &__input:placeholder-shown+&__label {
+        opacity: 0;
+        visibility: 0;
+        transform: translateY(-3rem);
+    }
+    &__label {
+        font-size: 1.6rem;
+        font-weight: 400;
+        letter-spacing: .2rem;
+        display: block;
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+        transition: .7s all;
+    }
+}
