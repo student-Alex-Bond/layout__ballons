@@ -4,6 +4,7 @@
         animation: bottom_to_up 1s ease-out .7s;
         animation-fill-mode: backwards;
     }
+    &,
     &:link,
     &:visited {
         @include style-link($color-gray);
@@ -12,6 +13,7 @@
         background: $color-white;
         border-radius: 50px;
         transition: all .3s;
+        border: none;
     }
     &:hover {
         transform: translateY(-4px);
@@ -38,5 +40,20 @@
         left: 0;
         z-index: -1;
         transition: all .4s;
+    }
+}
+
+.btn_brown {
+    &,
+    &:link,
+    &:visited {
+        background: $color-browm-dark;
+        color: $color-white;
+    }
+    &:hover {
+        &::after {
+            content: '';
+            background: $color-browm-dark;
+        }
     }
 }
