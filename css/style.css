@@ -671,8 +671,8 @@ body {
   opacity: 1;
 }
 .navigation__background {
-  height: 7rem;
-  width: 7rem;
+  height: 6rem;
+  width: 6rem;
   border-radius: 50%;
   background: radial-gradient(#ba8554, #a14f03);
   position: fixed;
@@ -724,12 +724,53 @@ body {
   transform: translateX(1rem);
 }
 .navigation__button {
+  text-align: center;
   background: #FFFFFF;
   height: 9rem;
   width: 9rem;
   border-radius: 50%;
   position: fixed;
-  top: 7rem;
-  right: 7rem;
+  top: 6rem;
+  right: 6rem;
   z-index: 200;
+  cursor: pointer;
+}
+.navigation__icon {
+  position: relative;
+  margin-top: 41px;
+}
+.navigation__icon, .navigation__icon::after, .navigation__icon::before {
+  width: 30px;
+  height: 2px;
+  background: #000;
+  display: inline-block;
+}
+.navigation__icon::after, .navigation__icon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.2s;
+}
+.navigation__icon::before {
+  top: -8px;
+}
+.navigation__icon::after {
+  top: 8px;
+}
+.navigation__button:hover .navigation__icon::before {
+  top: -10px;
+}
+.navigation__button:hover .navigation__icon:after {
+  top: 10px;
+}
+.navigation__toggle:checked + .navigation__button .navigation__icon {
+  background: transparent;
+}
+.navigation__toggle:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+.navigation__toggle:checked + .navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-135deg);
 }/*# sourceMappingURL=style.css.map */
