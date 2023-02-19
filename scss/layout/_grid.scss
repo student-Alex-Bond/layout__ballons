@@ -5,6 +5,9 @@
         margin-bottom: $margin-vertical-big;
     }
     @include clearfix;
+    @include respond(tab-land) {
+        max-width: 90.1rem;
+    }
 }
 
 .col-1-of-2 {

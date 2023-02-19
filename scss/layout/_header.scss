@@ -17,6 +17,9 @@
         transform: translate(-50%, -50%);
         width: 100%;
         text-align: center;
+        @include respond(tab-land) {
+            top: 50%;
+        }
     }
     &__title {
         color: $color-white;
@@ -34,6 +37,9 @@
         animation-delay: 2s;
         animation-timing-function: ease-in;
         backface-visibility: hidden;
+        @include respond(tab-land) {
+            font-size: 4rem;
+        }
     }
     &__title_subtitle {
         display: block;
@@ -47,5 +53,9 @@
         animation-timing-function: ease-in;
         backface-visibility: hidden;
         margin-bottom: 6.5rem;
+        @include respond(tab-land) {
+            font-size: 3.5rem;
+            margin-bottom: 3.5rem;
+        }
     }
 }
